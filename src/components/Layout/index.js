@@ -19,13 +19,13 @@ const Layout = ({ children }) => {
           <em>
             R<sub>t</sub>
           </em>{' '}
-          do COVID-19 por estado no Brasil
+          de COVID-19 por departamento en Perú
         </Typography>
         <Typography variant="h6" color="primary">
           Atualizado diariamente.
         </Typography>
         <Typography variant="h6">
-          Dados até: <strong>{formattedDate}</strong>
+          Datos hasta: <strong>{formattedDate}</strong>
         </Typography>
         {children}
         <Footer />

@@ -49,18 +49,12 @@ const Home = () => {
   return (
     <>
       <Section
-        title="O que é o <em>R<sub>t</sub></em>?"
-        description={`O <em>R<sub>t</sub></em>, ou número de reprodução eficaz, é o número médio de contágios
-          causados por cada pessoa infectada em um determinado ponto no tempo,
-          levando em consideração mudanças no nosso comportamento (quarentena,
-          uso de máscaras, home office, etc). Um <em>R<sub>t</sub></em> de 3–4 infectará
-          virtualmente toda a população, enquanto um <em>R<sub>t</sub></em> de 1.5 pode ainda
-          alcançar 60% da população. Somente se o <em>R<sub>t</sub></em> for menor do que 1, a
-          epidemia irá diminuir de tamanho até ser eliminada.`}
+        title="¿Qué es el <em>R<sub>t</sub></em>?"
+        description={`El <em>R<sub>t</sub></em>, o número de reproducción efectivo, es el número promedio de infecciones causadas por cada persona infectada en un momento dado, teniendo en cuenta los cambios en nuestro comportamiento (cuarentena, uso de máscaras, oficina en el hogar, etc.). Un <em>R<sub>t</sub></em> de 3–4 infectará virtualmente a toda la población, mientras que un Rt de 1.5 aún puede llegar al 60% de la población. Solo si el Rt es menor que 1, la epidemia disminuirá de tamaño hasta que se elimine.`}
       />
       <Section
-        title="Comparação entre estados"
-        description="Para fazer uma comparação entre estados, mostramos a última estimativa de <em>R<sub>t</sub></em> de cada estado no gráfico a seguir, com a incerteza associada.<br>Os gráficos estão ordenados do melhor para o pior usando a estimativa mais provável do modelo."
+        title="Comparación entre departamentos"
+        description="Para hacer una comparación entre departamentos, mostramos la última estimación de Rt para cada estado en el gráfico a continuación, con la incertidumbre asociada. Los gráficos se ordenan de mejor a peor utilizando la estimación más probable del modelo."
       >
         <div className={classes.barChartWrapper}>
           {canRender(states) ? <Line data={states} /> : <Loader />}
@@ -68,7 +62,7 @@ const Home = () => {
       </Section>
       <Section
         title="<em>R<sub>t</sub></em> em tempo real por UF"
-        description="Nosso modelo produz uma estimativa de <em>R<sub>t</sub></em> para cada um dos estados brasileiros, com um intervalo crível de 90% de probabilidade. Nos gráficos a seguir, mostramos a estimativa para cada estado. No eixo vertical temos a estimativa de <em>R<sub>t</sub></em> ao longo do tempo. Os pontos são as estimativas, enquanto a sombra significa todos os possíveis valores de <em>R<sub>t</sub></em> em determinada data (intervalo crível). Somente se o <em>R<sub>t</sub></em> for menor do que 1, a epidemia irá diminuir de tamanho até ser eliminada."
+        description="Nuestro modelo produce una estimación de <em>R<sub>t</sub></em> para cada uno de los departamentos peruanos, con un rango creíble de 90% de probabilidad. En los gráficos a continuación, mostramos la estimación para cada departamento. En el eje vertical tenemos la estimación de <em>R<sub>t</sub></em> en el tiempo. Los puntos son las estimaciones, mientras que la sombra significa todos los valores posibles de <em>R<sub>t</sub></em> en una fecha determinada (intervalo creíble). Solo si el <em>R<sub>t</sub></em> es menor que 1, la epidemia disminuirá de tamaño hasta que se elimine."
       >
         <Grid
           container

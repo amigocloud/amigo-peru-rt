@@ -35,7 +35,7 @@ const StickyButtonGroup = ({ chartActive, onClick }) => {
   return (
     <div ref={button} className={classes.wrapper}>
       <div className={classnames(classes.root, { [classes.fixed]: isFixed })}>
-        <ButtonGroup
+        {/* <ButtonGroup
           color="secondary"
           variant="outlined"
           aria-label="Escolha o tipo de dado para visualizar no gráfico"
@@ -65,7 +65,7 @@ const StickyButtonGroup = ({ chartActive, onClick }) => {
           >
             Óbitos
           </Button>
-        </ButtonGroup>
+        </ButtonGroup> */}
       </div>
     </div>
   );

@@ -11,6 +11,8 @@ import useStyles from './Footer.styles';
 const Footer = () => {
   const classes = useStyles();
 
+  return null
+
   return (
     <footer className={classes.container}>
       <div className={classes.section}>

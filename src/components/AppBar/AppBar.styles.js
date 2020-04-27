@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    width: 60,
+    width: 250,
     marginRight: 'auto',
   },
 }));
