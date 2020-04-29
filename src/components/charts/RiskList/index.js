@@ -2,7 +2,7 @@ import React, { memo, useState } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 
 import {
-  BRAZIL_STATES,
+  DEPARTAMENTOS,
   getLastRtValue,
   formatListData,
   formatNewCasesData,
@@ -77,7 +77,7 @@ const BoxChart = ({
   return (
     <div className={classes.root}>
       <header className={classes.header}>
-        <Typography variant="h6">{BRAZIL_STATES[id]}</Typography>
+        <Typography variant="h6">{DEPARTAMENTOS[id]}</Typography>
         <Typography
           variant="h6"
           color={getLastRtValue(rtData, id) < 1 ? 'secondary' : 'error'}

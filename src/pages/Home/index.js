@@ -10,38 +10,19 @@ import { getModelResults } from 'store/actions';
 
 import useStyles from './Home.styles';
 
+import data from '../../data/output'
+
 const Home = () => {
   const classes = useStyles();
-  const dispatch = useDispatch();
 
-  const loading = useSelector((state) => state.loading);
-  const error = useSelector((state) => state.error);
-  const states = useSelector((state) => state.data?.states);
-
-  const canRender = useCallback(
-    (data) => !error && !loading && data !== undefined && data !== null,
-    [error, loading]
-  );
-
-  const getData = useCallback(async () => {
-    try {
-      await dispatch(getModelResults());
-    } catch (e) {
-      console.error(e);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    getData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const error = false;
+  const states = data.data;
 
   if (error) {
     return (
       <div className={classes.errorWrapper}>
-        <Typography variant="h5">Um Erro ocorreu!</Typography>
-        <Typography variant="h6">Tente novamente mais tarde.</Typography>
+        <Typography variant="h5">Ocurrió un error!</Typography>
+        <Typography variant="h6">Intente nuevamente más tarde.</Typography>
       </div>
     );
   }
@@ -57,11 +38,11 @@ const Home = () => {
         description="Para hacer una comparación entre departamentos, mostramos la última estimación de Rt para cada estado en el gráfico a continuación, con la incertidumbre asociada. Los gráficos se ordenan de mejor a peor utilizando la estimación más probable del modelo."
       >
         <div className={classes.barChartWrapper}>
-          {canRender(states) ? <Line data={states} /> : <Loader />}
+          { <Line data={states} /> }
         </div>
       </Section>
       <Section
-        title="<em>R<sub>t</sub></em> em tempo real por UF"
+        title="<em>R<sub>t</sub></em> en tiempo real por departamento"
         description="Nuestro modelo produce una estimación de <em>R<sub>t</sub></em> para cada uno de los departamentos peruanos, con un rango creíble de 90% de probabilidad. En los gráficos a continuación, mostramos la estimación para cada departamento. En el eje vertical tenemos la estimación de <em>R<sub>t</sub></em> en el tiempo. Los puntos son las estimaciones, mientras que la sombra significa todos los valores posibles de <em>R<sub>t</sub></em> en una fecha determinada (intervalo creíble). Solo si el <em>R<sub>t</sub></em> es menor que 1, la epidemia disminuirá de tamaño hasta que se elimine."
       >
         <Grid
@@ -71,7 +52,7 @@ const Home = () => {
           justify="center"
           spacing={4}
         >
-          {canRender(states) ? <RiskList data={states} /> : <Loader />}
+          {<RiskList data={states} />}
         </Grid>
       </Section>
     </>

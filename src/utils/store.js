@@ -1,6 +1,6 @@
 import { dateObjectBuider } from 'utils';
 
-export const BRAZIL_STATES = {
+export const DEPARTAMENTOS = {
   AM: 'Amazonas',
   AN: 'Ancash',
   AP: 'Apurímac',

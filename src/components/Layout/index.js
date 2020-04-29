@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
           de COVID-19 por departamento en Perú
         </Typography>
         <Typography variant="h6" color="primary">
-          Atualizado diariamente.
+          Actualizado diariamente.
         </Typography>
         <Typography variant="h6">
           Datos hasta: <strong>{formattedDate}</strong>

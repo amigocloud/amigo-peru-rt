@@ -49,7 +49,7 @@ const Footer = () => {
               >
                 Warzoom
               </Link>{' '}
-              Loft com todas as políticas internas, atualizado diariamente
+              Loft com todas as políticas internas, actualizado diariamente
             </Typography>
           </li>
           <li>
