@@ -31,6 +31,7 @@ const DEPARTAMENTOS_MAP = {
 fs.readFile('./data/source.csv', async (err, data) => {
   if (err) {
     console.error(err)
+    console.log("./data/source.csv file not found.")
     return
   }
 
@@ -49,8 +50,6 @@ fs.readFile('./data/source.csv', async (err, data) => {
     entry.High_90
   ]))
 
-  console.log()
-
   fs.writeFileSync('./src/data/output.js', `export default ${JSON.stringify({
     "columns": [
       "state",
@@ -61,4 +60,6 @@ fs.readFile('./data/source.csv', async (err, data) => {
     ],
     "data": outputJson
   })}`)
+
+  console.log("Done generating json source.")
 })

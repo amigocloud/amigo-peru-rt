@@ -27,3 +27,5 @@ yarn-error.log*
 
 ./data/source.csv
 ./src/data/output.js
+
+.firebase
