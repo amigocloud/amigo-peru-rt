@@ -7,9 +7,13 @@ import Footer from 'components/Footer';
 import Typography from 'components/Typography';
 import useStyles from './Layout.styles';
 
+import { fullFormatDate, getLastTimestamp, dateObjectBuider } from 'utils';
+
+import data from '../../data/output'
+
 const Layout = ({ children }) => {
   const classes = useStyles();
-  const formattedDate = useSelector((state) => state?.data?.lastUpdateTime);
+  const formattedDate = fullFormatDate(dateObjectBuider(getLastTimestamp(data.data)));
 
   return (
     <>
