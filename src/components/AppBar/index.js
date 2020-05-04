@@ -20,18 +20,21 @@ const AppBar = () => {
       >
         <Container maxWidth="xl">
           <Toolbar>
+            
             <img className={classes.title} src="https://cdnamigocloud.global.ssl.fastly.net/dashboard/img/AmigoCloud-01.svg" />
+            
             <nav className={classes.navigation}>
               <Button
                 className={classes.link}
                 color="inherit"
                 component="a"
-                href="https://medium.com/@rburhum"
+                href="https://medium.com/@rburhum/el-martillazo-y-el-huayno-278716f49938"
                 target="_blank"
-                title="Una métrica para COVID-19"
+                title="El Martillazo y el Huayno"
               >
-                Metodologia
+                El Martillazo y el Huayno
               </Button>
+              {/*
               <Button
                 className={classes.link}
                 color="inherit"
@@ -42,6 +45,7 @@ const AppBar = () => {
               >
                 Perspectivas
               </Button>
+              */}
               {/* <Button
                 className={classes.link}
                 color="inherit"
