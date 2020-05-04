@@ -6,7 +6,9 @@
 - yarn
 - yarn start
 
-
+# To Update data
+- replace ./data/source.csv
+- yarn deploy
 
 # Thank you
 
