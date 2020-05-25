@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
           Actualizado diariamente.
         </Typography>
         <Typography variant="h6">
-          Datos hasta: <strong>{formattedDate}</strong>
+          Datos hasta: <strong>{formattedDate}</strong>. Si no ves la última version, intenta refrescar apretando Shift.
         </Typography>
         {children}
         <Footer />
